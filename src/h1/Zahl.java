@@ -4,10 +4,6 @@ public class Zahl {
 	public boolean even, small, positive;
 	public int num;
 
-	public Zahl(int n) {
-		num = n;
-	}
-
 	public void setEven() {
 		even = (Math.abs(num) % 2 == 0);
 	}

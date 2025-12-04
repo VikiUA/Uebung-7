@@ -11,16 +11,19 @@ public class H2_main {
 
 	static public int[] change(int[] a, int[] b, int start, int end) {
 
-		if (end > start && Arrays.compare(a, b) != 0) {
+		if (end <= start) {
+			return new int[0];
+		}
+		
+		if (Arrays.compare(a, b) != 0) {
 			return Arrays.copyOf(a, a.length);
 		}
-
-		if (end > start && Arrays.compare(a, b) == 0) {
-			Arrays.sort(a);
-			return Arrays.copyOfRange(a, start, end);
-		}
-
-		return new int[0];
+		
+		int[] sorted = Arrays.copyOf(a, a.length);
+		Arrays.sort(sorted);
+		
+		int[] result = Arrays.copyOfRange(sorted, start, end);
+		return result;
 	}
 
 }
