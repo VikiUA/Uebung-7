@@ -5,12 +5,12 @@ public class Mensch {
 	public int gebJahr;
 	public int alter;
 	
-	public void setName(String a) {
-		name = a;
+	public void setName(String name) {
+		this.name = name;
 	}
 	
-	public void setGebJahr(int b) {
-		gebJahr = b;
+	public void setGebJahr(int gebJahr) {
+		this.gebJahr = gebJahr;
 	}
 	
 	public void setAlter() {
